@@ -1,0 +1,92 @@
+.wrapper {
+  display: flex;
+  border-radius: var(--mantine-radius-lg);
+  padding: 4px;
+  margin-top: 40px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Responsive: stack on small screens */
+  @media (max-width: 768px) {  /* $mantine-breakpoint-sm usually ~768px */
+    flex-direction: column;
+  }
+  background-color: white;
+  color: #1a2f33;
+  border-radius: 0.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.form {
+  flex: 1;
+  padding: var(--mantine-spacing-xl);
+  padding-left: calc(var(--mantine-spacing-xl) * 2);
+  border-left: 0;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: var(--mantine-spacing-md);
+    padding-left: var(--mantine-spacing-md);
+  }
+}
+
+.fields {
+  margin-top: -12px;
+}
+
+.fieldInput {
+  flex: 1;
+
+  & + & {
+    margin-left: var(--mantine-spacing-md);
+
+    @media (max-width: $mantine-breakpoint-sm) {
+      margin-left: 0;
+      margin-top: var(--mantine-spacing-md);
+    }
+  }
+}
+
+.fieldsGroup {
+  display: flex;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column;
+  }
+}
+
+.contacts {
+  /* box-sizing: border-box; */
+  background-color: #f39c12;
+  position: relative;
+  border-radius: 0.5rem;
+  border-bottom-right-radius: var(--mantine-radius-lg) !important;
+  border-top-right-radius: var(--mantine-radius-lg) !important;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid transparent;
+  padding: var(--mantine-spacing-xl);
+  flex: 0 0 280px;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    margin-bottom: var(--mantine-spacing-sm);
+    padding-left: var(--mantine-spacing-md);
+  }
+}
+
+.title {
+  margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
+    font-family: 'Josefin Sans', sans-serif;
+  
+    @media (max-width: $mantine-breakpoint-sm) {
+    margin-bottom: var(--mantine-spacing-xl);
+  }
+}
+
+.control {
+  @media (max-width: $mantine-breakpoint-sm) {
+    flex: 1;
+  }
+
+  background-color: #f39c12 !important;
+}

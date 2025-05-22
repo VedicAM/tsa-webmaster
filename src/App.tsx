@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { MantineProvider } from '@mantine/core';
+import { Navbar } from './Navbar';
+import { HeroComponent } from './HeroComponent';
+import { About } from './About';
+
+import '@mantine/core/styles.css';
+import { Menu } from './Menu';
+import { Reviews } from './Reviews';
+import { ContactUs } from './ContactUs';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MantineProvider>
+      <Navbar/>
+
+      <HeroComponent />
+      <About />
+      <Menu />
+      {/* <Reviews /> */}
+      <ContactUs />
+    </MantineProvider>
   );
 }
 
