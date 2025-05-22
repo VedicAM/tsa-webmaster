@@ -43,9 +43,9 @@ export const meals =
     {
         id: 6,
         category: 'Biryanis',
-        name: "Tomato Biryani",
-        price: "$10.00",
-        description: "Made with basmati rice, ripe tomatoes, and a blend of spices like cumin, cinnamon, and garam masala, creating a tangy and flavorful biryani.",
+        name: "Tomato Biryani (Express)",
+        price: "$12.00",
+        description: "Made with basmati rice, ripe tomatoes, and spices like cumin, cinnamon, and garam masala for a tangy, flavorful biryani.",
         image: "imgs/tomatobiryani.webp"
     },
     {
@@ -91,9 +91,9 @@ export const meals =
     {
         id: 12,
         category: 'Curries',
-        name: "Drumstick Curry",
-        price: "$9.50",
-        description: "Made with drumsticks (moringa pods), tomatoes, onions, and spices like turmeric, cumin, and coriander, simmered in a rich and flavorful curry sauce.",
+        name: "Drumstick Curry (Express)",
+        price: "$11.50",
+        description: "Made with drumsticks (moringa pods), tomatoes, onions, and spices like turmeric, cumin, and coriander, simmered in a rich curry sauce.",
         image: "imgs/drumstickcurry.webp"
     },
     {
@@ -139,9 +139,9 @@ export const meals =
     {
         id: 18,
         category: 'Drinks',
-        name: "Filter Coffee",
-        price: "$7.50",
-        description: "Made with freshly brewed coffee, milk, and sugar, using traditional South Indian drip brewing methods.",
+        name: "Filter Coffee (Express)",
+        price: "$10.00",
+        description: "Freshly brewed coffee with milk and sugar, made using traditional South Indian drip methods.",
         image: "imgs/filtercoffee.webp"
     },
     {
@@ -187,9 +187,9 @@ export const meals =
     {
         id: 24,
         category: 'Snacks',
-        name: "Chakli",
-        price: "$5.00",
-        description: "Made with rice flour, chickpea flour, and a blend of spices like cumin and sesame seeds, then deep-fried into crispy, spiral-shaped snacks.",
+        name: "Chakli (Express)",
+        price: "$9.50",
+        description: "Quick mix of rice and chickpea flours with cumin and sesame, then deep-fried into crispy spiral snacks.",
         image: "imgs/chakli.webp"
     },
 ];
