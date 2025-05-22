@@ -7,6 +7,7 @@ import '@mantine/core/styles.css';
 import { Menu } from './Menu';
 import { Reviews } from './Reviews';
 import { ContactUs } from './ContactUs';
+import { Footer } from './Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Menu />
       {/* <Reviews /> */}
       <ContactUs />
+      <Footer />
     </MantineProvider>
   );
 }

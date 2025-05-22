@@ -9,7 +9,18 @@ export function AboutUsBlock() {
   return (
     <Container my="md" fluid>
       <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
-        <Skeleton height={PRIMARY_COL_HEIGHT} radius="md" animate={false} />
+        <img
+          src="hero4.jpg"
+          alt="Hero"
+          style={{
+            height: PRIMARY_COL_HEIGHT,
+            width: '100%',
+            borderRadius: 'var(--mantine-radius-md)',
+            objectFit: 'cover',
+            display: 'block'
+          }}
+        />
+
         
         <Box
           h={PRIMARY_COL_HEIGHT}

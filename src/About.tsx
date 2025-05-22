@@ -8,7 +8,7 @@ import { Numbers } from './Numbers';
 
 export function About() {
   return (
-    <div className={classes.wrapper}>
+    <section className={classes.wrapper} id="about">
         <AboutUsBlock />
         <Spacer />
         <Features />
@@ -16,6 +16,6 @@ export function About() {
         <Chefs />
         <Spacer />
         <Numbers />
-    </div>
+    </section>
   );
 }

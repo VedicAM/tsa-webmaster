@@ -23,46 +23,49 @@ function Card({ image, title, category }: CardProps) {
       radius="md"
       style={{ 
         backgroundImage: `url(${image})`,
-        minHeight: '400px', // Increased height
+        minHeight: '400px',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
       }}
       className={classes.card}
     >
       <div>
-        <Text className={classes.category} size="xs">
+        <Text className={classes.category} size="xs" c="white">
           {category}
         </Text>
-        <Title order={3} className={classes.title}>
-          {title}
-        </Title>
       </div>
-      <Button variant="white" color="dark">
-        Read article
-      </Button>
+
+      <Title
+        order={2} // bigger than h3
+        className={classes.title}
+        style={{ fontSize: '2.5rem', color: 'white', marginTop: 'auto' }} // bigger and white, pushed down
+      >
+        {title}
+      </Title>
     </Paper>
   );
 }
 
+
 const data = [
   {
     image:
-      'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Best forests to visit in North America',
-    category: 'nature',
+      'hero1.jpg',
+    title: 'Crafted Flavors, Unforgettable Moments',
+    category: 'MEALS',
   },
   {
     image:
-      'https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Hawaii beaches review: better than you think',
-    category: 'beach',
+      'hero2.jpg',
+    title: 'Where Taste Meets Tradition',
+    category: 'MEALS',
   },
   {
     image:
-      'https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Mountains at night: 12 best locations to enjoy the view',
-    category: 'nature',
+      'hero3.jpg',
+    title: 'Savor the Experience',
+    category: 'MEALS',
   },
 ];
 
@@ -79,11 +82,12 @@ export function HeroComponent() {
   const [opacity, setOpacity] = useState(1);
 
   return (
+    <section id="home">
     <div style={{
       marginTop: '40px',
       width: '95%',
       marginLeft: 'auto',
-      marginRight: 'auto',}}>
+      marginRight: 'auto',}} className={classes.root}>
       <Carousel
         slideSize={{ base: '100%', sm: '100%' }}
         slideGap={3}
@@ -102,5 +106,6 @@ export function HeroComponent() {
         {slides}
       </Carousel>
     </div>
+    </section>
   );
 }

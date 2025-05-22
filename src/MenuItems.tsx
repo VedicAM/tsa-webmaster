@@ -7,9 +7,10 @@ type MenuItemProps = {
   image?: string;
   description?: string;
   key?: number;
+  onAddToCart?: (quantity: number) => void;
 };
 
-export function MenuItems({ name, price, image, description, key }: MenuItemProps) {
+export function MenuItems({ name, price, image, description, key, onAddToCart }: MenuItemProps) {
   const [hovered, setHovered] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
@@ -21,7 +22,7 @@ export function MenuItems({ name, price, image, description, key }: MenuItemProp
         padding="md"
         radius="md"
         withBorder
-        style={{ position: 'relative', overflow: 'visible' }} // Important for absolute child
+        style={{ position: 'relative', overflow: 'visible' }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
@@ -40,17 +41,19 @@ export function MenuItems({ name, price, image, description, key }: MenuItemProp
             }}
           >
             <Group mb="xs">
-              <Text size="sm" fw={700} c='#1a2f33'>
+              <Text size="sm" fw={700} c="#1a2f33">
                 {name}
               </Text>
               <Badge color="#f39c12">{price}</Badge>
             </Group>
-            <Text size="sm" c="dimmed">{description}</Text>
+            <Text size="sm" c="dimmed">
+              {description}
+            </Text>
           </Box>
         </SimpleGrid>
 
-        {/* Hover overlay - absolutely positioned */}
-        <Box
+        {/* Hover overlay */}
+        {/* <Box
           style={{
             position: 'absolute',
             left: 0,
@@ -79,10 +82,16 @@ export function MenuItems({ name, price, image, description, key }: MenuItemProp
             style={{ width: 80 }}
             hideControls={false}
           />
-          <Button size="xs" color="#f39c12" onClick={() => alert(`Added ${quantity} of ${name}`)}>
+          <Button
+            size="xs"
+            color="#f39c12"
+            onClick={() => {
+              if (onAddToCart) onAddToCart(quantity);
+            }}
+          >
             Add to Cart
           </Button>
-        </Box>
+        </Box> */}
       </Card>
     </Container>
   );

@@ -12,3 +12,8 @@ body {
   background-size: 100%;
   background-attachment: fixed;
 }
+
+body.mantine-Modal-root-open {
+  margin: 16px !important;
+  padding: 16px !important;
+}

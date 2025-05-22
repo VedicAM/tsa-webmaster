@@ -1,3 +1,8 @@
+.root {
+  box-shadow: 8px 8px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+}
+
 .card {
   height: 440px;
   display: flex;
