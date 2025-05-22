@@ -9,6 +9,8 @@ import { Reviews } from './Reviews';
 import { ContactUs } from './ContactUs';
 import { Footer } from './Footer';
 
+import { Analytics } from "@vercel/analytics/react"
+
 function App() {
   return (
     <MantineProvider>
