@@ -22,6 +22,7 @@ function App() {
       {/* <Reviews /> */}
       <ContactUs />
       <Footer />
+      <Analytics />
     </MantineProvider>
   );
 }
